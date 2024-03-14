@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <link rel="shortcut icon" type="x-icon" href="">
+    <title>HEALTH SYNC</title>
+</head>
+<body>
+
+    <section id="home" class="home" home> 
+      
+            <div class="search-box">
+                <h1>Humen Disease Detenction</h1>
+                <p>Your health detective. Powered by AI </p>
+            </div>
+                <form id="searchForm" onsubmit="return validateForm()">
+                    <select type="text" class="search-field" id="search-select" onchange="handleSelectChange()">
+                      <option class="op" disabled selected >select Disease </option>
+                      <option class="op" value="#">Heart Disease</option>
+                      <option class="op" value="diabetes">Diabetes</option>
+                      <option class="op" value="#">Covid</option>
+                      <option class="op" value="#">Pneumonia</option>
+                    
+                    </select>
+                   
+                        <button onclick="validateSelect()" type="submit" class="btn" >Search</button>
+                  </form>
+               
+                  <script>
+                    function validateForm() {
+                        var selectElement = document.getElementById("search-select");
+                        var selectedOption = selectElement.options[selectElement.selectedIndex];
+                        
+                        if (selectedOption.disabled) {
+                            alert("Please select Event Type");
+                            return false; // Prevent form submission
+                        }
+                    }
+                </script>
+       
+            <script>
+                document.getElementById("searchForm").addEventListener("submit", function (event) {
+                  event.preventDefault(); 
+                  const paymentselect = document.getElementById("search-select").value;
+                  window.location.href = paymentselect + ".html";
+                });
+              </script>
+                  
+            
+              <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+              <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script><script  src="./script.js"></script>
+    </section>
+   
+    
+    </head>
+    <body>
+    
+   
+
+      <footer>
+       
+        <div class="foot">
+      
+            <div><img src="./images/1000038086-modified.png" alt="">
+           
+         
+           <hr>
+           </div>
+        </div>
+      </footer>
+</div>
+</body>
+
+</html>
